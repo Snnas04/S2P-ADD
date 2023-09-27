@@ -1,4 +1,6 @@
-//PART 1
+//PART 2
+
+package cat.cifp.spaad.review;
 
 class Factura {
     private String producto;
