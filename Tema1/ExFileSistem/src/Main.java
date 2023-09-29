@@ -53,8 +53,8 @@ public class Main {
 
     // 3. Copia un fitxer entre dos directoris
     private void Exercisi3() {
-        Path origen = Paths.get("dir1/test.txt");
-        Path desti = Paths.get("dir2");
+        Path origen = Paths.get("./dir1/test.txt");
+        Path desti = Paths.get("./dir2/test.txt");
 
         try {
             Files.copy(origen, desti);
@@ -66,8 +66,8 @@ public class Main {
 
     // 4. Mou un fitxer a un altre directori
     private void Exercisi4() {
-        Path origen = Paths.get("dir1/test.txt");
-        Path desti = Paths.get("dir2");
+        Path origen = Paths.get("./dir1/test2.txt");
+        Path desti = Paths.get("./dir2/test.txt");
 
         try {
             Files.move(origen, desti);
@@ -89,4 +89,9 @@ public class Main {
             System.out.println(e.getMessage());
         }
     }
+
+    // 6. Mostra per consola el contingut d'un directori, inclosos els seus subdirectoris i els seus continguts.
+
+    // 7. Crea un Form amb un component Jtree que mostri la mateixa informació que l'exercici anterior. Prova-ho amb un directori "petitet".
+
 }
