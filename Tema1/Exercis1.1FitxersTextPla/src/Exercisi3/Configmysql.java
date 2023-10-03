@@ -5,6 +5,12 @@ import java.io.*;
 public class Configmysql {
     private static final String FILE_NAME = "src/Exercisi3/mysql.conf";
 
+    public static void main(String[] args) {
+        escriureConfiguracioMySQL();
+
+        llegirConfiguracioMySQL();
+    }
+
     // Mètode per escriure la configuració de MySQL al fitxer "mysql.conf"
     public static void escriureConfiguracioMySQL() {
         try {
@@ -44,13 +50,5 @@ public class Configmysql {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        // Escriure la configuració de MySQL al fitxer
-        escriureConfiguracioMySQL();
-
-        // Llegir i mostrar la configuració de MySQL del fitxer
-        llegirConfiguracioMySQL();
     }
 }
