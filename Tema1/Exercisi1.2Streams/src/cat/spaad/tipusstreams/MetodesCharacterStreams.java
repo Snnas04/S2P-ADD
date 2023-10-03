@@ -1,19 +1,17 @@
 package cat.spaad.tipusstreams;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
-import static java.lang.System.in;
-
-public class MetodesByteStreams {
+public class MetodesCharacterStreams {
     public static void main(String[] args) {
 
     }
 
-    public void llegeixBytes(String origen) throws IOException {
-        FileInputStream in = new FileInputStream(origen);
+    public void llegeixCharacters(String origen) throws IOException {
+        FileReader in = new FileReader(origen);
 
         try(in) {
             System.out.println("\n====================\n");
@@ -29,9 +27,9 @@ public class MetodesByteStreams {
         }
     }
 
-    public void escriuBytes(String desti, byte[] dades) throws IOException {
-        FileOutputStream out = new FileOutputStream(desti);
-
+    public void escriuCharacters(String desti, String dades) throws IOException {
+        FileWriter out = new FileWriter(desti);
+        
         try(out) {
             out.write(dades);
         } catch (FileNotFoundException e) {
