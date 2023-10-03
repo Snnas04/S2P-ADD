@@ -1,0 +1,8 @@
+Crea un arxiu benvinguda.dat que contingui la frase "Benvingut als Streams". Crea’n un altre amb el nom que vulguis, i amb l'extensió txt.
+Dins posa-hi mínim 5 línies i màxim 10 línies de text, d'un text extret d'internet o d'algun llibre o document. Crea'n un tercer molt similar a
+l'anterior, amb un altre nom, però amb mínim 500 línies de text. Aquests seran els arxius de partida per començar a practicar amb les diferents
+funcions vistes sobre streams.
+Crea un paquet amb el nom cat.spaad.iniciacio
+Crea una classe amb un main a dins aquest paquet anomenada IniciacioStreams.
+Crea un altre paquet anomenat cat.spaad.tipusstreams, dins del qual anirem creant a partir d'ara totes les classes per als diferents tipus d'streams
+que treballarem.
