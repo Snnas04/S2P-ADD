@@ -8,10 +8,6 @@ import java.io.IOException;
 import static java.lang.System.in;
 
 public class MetodesByteStreams {
-    public static void main(String[] args) {
-
-    }
-
     public void llegeixBytes(String origen) throws IOException {
         FileInputStream in = new FileInputStream(origen);
 

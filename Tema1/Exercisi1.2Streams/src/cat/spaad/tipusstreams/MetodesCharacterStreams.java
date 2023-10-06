@@ -6,10 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class MetodesCharacterStreams {
-    public static void main(String[] args) {
-
-    }
-
     public void llegeixCharacters(String origen) throws IOException {
         FileReader in = new FileReader(origen);
 

@@ -3,10 +3,6 @@ package cat.spaad.tipusstreams;
 import java.io.*;
 
 public class MetodesBufferedStreams {
-    public static void main(String[] args) {
-
-    }
-
     public void llegeixLinia(String origen) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(origen));
 
