@@ -21,8 +21,6 @@ public class MetodesBufferedStreams {
     }
 
     public void escriuLinia(String desti, String[] dades) throws IOException {
-        //Guarda al fitxer destí el text contingut dins l'array de cadenes dades. Al fitxer s'ha de veure cada string
-        // en una línia (out.newLine()). (BufferedWriter)
         BufferedWriter out = new BufferedWriter(new FileWriter(desti));
 
         try(out) {

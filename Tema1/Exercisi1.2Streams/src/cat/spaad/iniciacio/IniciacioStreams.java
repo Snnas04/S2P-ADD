@@ -1,9 +1,8 @@
 package cat.spaad.iniciacio;
 
-import cat.spaad.tipusstreams.MetodesBufferedStreams;
-import cat.spaad.tipusstreams.MetodesByteStreams;
-import cat.spaad.tipusstreams.MetodesCharacterStreams;
-import cat.spaad.tipusstreams.MetodesDataStreams;
+import cat.spaad.ajudes.Inicis;
+import cat.spaad.ajudes.MetodesObjectStreams;
+import cat.spaad.tipusstreams.*;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,8 +11,8 @@ public class IniciacioStreams {
     public static void main(String[] args) {
         IniciacioStreams iniciacioStreams = new IniciacioStreams();
         try {
-            iniciacioStreams.provesData();
-        } catch (IOException e) {
+            iniciacioStreams.provesObjecte();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -37,5 +36,11 @@ public class IniciacioStreams {
         double[] dades = {4.0, 12.0, 3.5, 44.0332, 15.2304};
         new MetodesDataStreams().escriuArray("src/petitCopy.txt", dades);
         new MetodesDataStreams().llegeixArray("src/petitCopy.txt");
+    }
+
+    public void provesObjecte() throws Exception {
+        Inicis inicis = new Inicis(12, "Test Object Streams");
+        new MetodesObjectStreams().escriuObjecte("src/petitObject.dat", inicis);
+        new MetodesObjectStreams().llegeixObjecte("src/petitObject.dat");
     }
 }

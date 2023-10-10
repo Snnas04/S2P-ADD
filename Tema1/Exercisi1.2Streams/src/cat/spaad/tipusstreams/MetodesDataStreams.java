@@ -4,8 +4,6 @@ import java.io.*;
 
 public class MetodesDataStreams {
     public  double[] llegeixArray(String origen) throws IOException {
-        // Llegeix les dades que s'han escrit al fitxer origen i torna un array amb les dades que ha llegit. Ho pots provar
-        // amb el fitxer generat a (b). (DataInputStream)
         DataInputStream in = new DataInputStream(new FileInputStream(origen));
 
         double[] dades;
