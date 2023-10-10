@@ -11,7 +11,7 @@ public class IniciacioStreams {
     public static void main(String[] args) {
         IniciacioStreams iniciacioStreams = new IniciacioStreams();
         try {
-            iniciacioStreams.provesObjecte();
+            iniciacioStreams.provesComparacions();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -42,5 +42,10 @@ public class IniciacioStreams {
         Inicis inicis = new Inicis(12, "Test Object Streams");
         new MetodesObjectStreams().escriuObjecte("src/petitObject.dat", inicis);
         new MetodesObjectStreams().llegeixObjecte("src/petitObject.dat");
+    }
+
+    public void provesComparacions() throws IOException {
+        new MetodesCharacterStreams().inutil("src/Shakespeare.txt");
+        new MetodesBufferedStreams().inutil("src/Shakespeare.txt");
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cicle>
+    <nom>Desenvolupament d'Aplicacions Multiplataforma</nom>
+    <familia>Informàtica i Comunicacions</familia>
+    <llistaModuls>
+        <moduls>
+            <codi>ADD</codi>
+            <hores>200</hores>
+            <nom>Accés a dades</nom>
+        </moduls>
+        <moduls>
+            <codi>PSP</codi>
+            <hores>300</hores>
+            <nom>Programació de Serveis i Processos</nom>
+        </moduls>
+        <moduls>
+            <codi>SGE</codi>
+            <hores>100</hores>
+            <nom>Sistemes de Gestio Empresaarial</nom>
+        </moduls>
+        <moduls>
+            <codi>PMM</codi>
+            <hores>400</hores>
+            <nom>Programació Multimedia i Dispositius Movils</nom>
+        </moduls>
+    </llistaModuls>
+</cicle>

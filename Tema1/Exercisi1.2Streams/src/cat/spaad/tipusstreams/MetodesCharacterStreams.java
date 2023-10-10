@@ -1,5 +1,7 @@
 package cat.spaad.tipusstreams;
 
+import cat.spaad.auxiliar.Cronometre;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -34,6 +36,29 @@ public class MetodesCharacterStreams {
             throw new RuntimeException(e);
         } finally {
             out.close();
+        }
+    }
+
+    public void inutil(String origen) throws IOException {
+        FileReader in = new FileReader(origen);
+
+        try(in) {
+            System.out.println("\nCaracter Streams");
+            Cronometre cronometre = new Cronometre();
+            cronometre.inicia();
+
+            int c;
+            while ((c = in.read()) != -1) {}
+
+            cronometre.atura();
+
+            System.out.println("Temps de lectura: " + cronometre.mostra() + " milisegons");
+
+            System.out.println("\n====================");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {
+            in.close();
         }
     }
 }

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/CLASSEBINDIG.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/cicle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/FastInfoset-1.2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/stax-ex-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/txw2-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/lib/txw2-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/modul.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/src/Cicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/src/Modul.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/src/Proves.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSEBINDIG/src/Proves2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exercicis1.3JAXB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/books.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/FastInfoset-1.2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stax-ex-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/txw2-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/txw2-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cat/spaad/classes/Llibre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cat/spaad/llegirescriure/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/src/Shakespeare.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/auxiliar/Cronometre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Llibreries JAXB.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/FastInfoset-1.2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/stax-ex-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/txw2-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/txw2-2.3.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercis1.1FitxersTextPla-marcsans.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/iniciacio/IniciacioStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/iniciacio/IniciacioStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/tipusstreams/MetodesBufferedStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/tipusstreams/MetodesBufferedStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/tipusstreams/MetodesCharacterStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercisi1.2Streams/src/cat/spaad/tipusstreams/MetodesCharacterStreams.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="AnnotationType" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/cat/spaad/classes/Llibre.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/cat/spaad/llegirescriure/Main.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2WZmnDbgygfxaz1vtVXjI3CRDx1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/snnas/Desktop/Classe/ADD/Tema1/Exercicis1.3JAXB/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cat.spaad.classes" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="" />
+      <created>1696948642710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696948642710</updated>
+      <workItem from="1696948643782" duration="1203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
