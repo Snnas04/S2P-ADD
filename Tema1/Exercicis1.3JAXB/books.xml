@@ -4,7 +4,6 @@
    <books>
       <book id="bk101">
          <author>Gambardella, Matthew</author>
-
       </book>
       <book id="bk102">
          <author>Ralls, Kim</author>

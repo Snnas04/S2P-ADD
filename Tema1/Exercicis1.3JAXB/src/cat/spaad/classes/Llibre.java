@@ -1,28 +1,22 @@
 package cat.spaad.classes;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement
 public class Llibre {
     private String autor;
     private String titol;
     private String genere;
-    private int preu;
-    private int dataPublicacio;
+    private String data_publicacio;
     private String descripcio;
 
-    public Llibre() {
-    }
+    public Llibre() {}
 
-    public Llibre(String autor, String titol, String genere, int preu, int dataPublicacio, String descripcio) {
+    public Llibre(String autor, String titol, String genere, String data_publicacio, String descripcio) {
         this.autor = autor;
         this.titol = titol;
         this.genere = genere;
-        this.preu = preu;
-        this.dataPublicacio = dataPublicacio;
+        this.data_publicacio = data_publicacio;
         this.descripcio = descripcio;
     }
 
@@ -50,20 +44,12 @@ public class Llibre {
         this.genere = genere;
     }
 
-    public int getPreu() {
-        return preu;
+    public String getData_publicacio() {
+        return data_publicacio;
     }
 
-    public void setPreu(int preu) {
-        this.preu = preu;
-    }
-
-    public int getDataPublicacio() {
-        return dataPublicacio;
-    }
-
-    public void setDataPublicacio(int dataPublicacio) {
-        this.dataPublicacio = dataPublicacio;
+    public void setData_publicacio(String data_publicacio) {
+        this.data_publicacio = data_publicacio;
     }
 
     public String getDescripcio() {
@@ -80,8 +66,7 @@ public class Llibre {
                 "autor='" + autor + '\'' +
                 ", titol='" + titol + '\'' +
                 ", genere='" + genere + '\'' +
-                ", preu=" + preu +
-                ", dataPublicacio=" + dataPublicacio +
+                ", data_publicacio='" + data_publicacio + '\'' +
                 ", descripcio='" + descripcio + '\'' +
                 '}';
     }
