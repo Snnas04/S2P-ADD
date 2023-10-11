@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+    <name>Llibres de Harry Potter</name>
+    <books>
+        <book id="jk123">
+            <author>J.K. Rowling</author>
+            <publish_date>02/07/1997</publish_date>
+            <description>Una historia de màgia</description>
+            <genre>Fantasia</genre>
+            <price>24.99</price>
+            <title>Harry Potter i la pedra filosofal</title>
+        </book>
+        <book id="jk321">
+            <author>J.K. Rowling</author>
+            <publish_date>02/07/1998</publish_date>
+            <description>Una historia de màgia</description>
+            <genre>Fantasia</genre>
+            <price>24.99</price>
+            <title>Harry Potter i la cambra secreta</title>
+        </book>
+    </books>
+</catalog>

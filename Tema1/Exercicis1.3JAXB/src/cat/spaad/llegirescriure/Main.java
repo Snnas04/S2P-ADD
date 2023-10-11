@@ -11,23 +11,36 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws JAXBException {
+        escriureCataleg();
+        llegirCataleg();
+    }
+
+    private static void llegirCataleg() throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(Catalog.class);
+
+        var unmarshaller = context.createUnmarshaller();
+        var catalog2 = (Catalog) unmarshaller.unmarshal(new File("books.xml"));
+        System.out.println(catalog2);
+    }
+
+    private static void escriureCataleg() throws JAXBException {
         ArrayList<Llibre> list = new ArrayList<Llibre>();
-        list.add(new Llibre("J.K. Rowling", "Harry Potter i la pedra filosofal", "Fantasia", "26/06/1997", "Una " +
-                "historia de màgia"));
-        list.add(new Llibre("J.K. Rowling", "Harry Potter i la cambra secreta", "Fantasia", "02/07/1998", "Una " +
-                "historia de màgia"));
+        list.add(new Llibre("jk123", "J.K. Rowling", "Harry Potter i la pedra filosofal", "Fantasia", "24.99", "02/07" +
+                "/1997",
+                "Una" +
+                        " " +
+                        "historia de màgia"));
+        list.add(new Llibre("jk321", "J.K. Rowling", "Harry Potter i la cambra secreta", "Fantasia", "24.99", "02/07/1998",
+                "Una" +
+                        " " +
+                        "historia de màgia"));
 
         Catalog catalog = new Catalog("Llibres de Harry Potter", list);
 
         JAXBContext context = JAXBContext.newInstance(Catalog.class);
 
         Marshaller marshaller = context.createMarshaller();
-
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(list, new File("books2.xml"));
-
-//        var unmarshaller = context.createUnmarshaller();
-//        var llibre2 = (Catalog) unmarshaller.unmarshal(new File("books2.xml"));
-//        System.out.println(llibre2);
+        marshaller.marshal(catalog, new File("books_prova.xml"));
     }
 }

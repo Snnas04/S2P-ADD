@@ -1,11 +1,13 @@
 package cat.spaad.classes;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 
 @XmlRootElement
-@XmlType(propOrder = {"nom", "llibre"})
+@XmlType(propOrder = {"nom", "llibres"})
 public class Catalog {
     private String nom;
     private ArrayList<Llibre> llibres = new ArrayList<Llibre>();
@@ -17,6 +19,7 @@ public class Catalog {
         this.llibres = llibres;
     }
 
+    @XmlElement (name = "name")
     public String getNom() {
         return nom;
     }
@@ -25,6 +28,8 @@ public class Catalog {
         this.nom = nom;
     }
 
+    @XmlElementWrapper (name = "books")
+    @XmlElement (name = "book")
     public ArrayList<Llibre> getLlibres() {
         return llibres;
     }
@@ -38,6 +43,7 @@ public class Catalog {
         return "Catalog{" +
                 "nom='" + nom + '\'' +
                 ", llibres=" + llibres +
+                "\n" +
                 '}';
     }
 }
