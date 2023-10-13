@@ -5,12 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/books_prova.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/Activitat1-OPCIONAL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/cities.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/estructuraXML.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/FastInfoset-1.2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/stax-ex-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/txw2-2.3.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/lib/txw2-2.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/src/Ciutat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/src/Pais.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Activitat1-OPCIONAL/src/PaisosDelMon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cat/spaad/classes/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cat/spaad/classes/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cat/spaad/classes/Llibre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cat/spaad/classes/Llibre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cat/spaad/llegirescriure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cat/spaad/llegirescriure/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +84,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/snnas/Desktop/Classe/ADD/Tema1/CLASSEBINDIG&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/snnas/Desktop/Classe/ADD/Tema1/Exercicis1.3JAXB&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,6 +114,9 @@
       <workItem from="1697037847365" duration="106000" />
       <workItem from="1697037962387" duration="1885000" />
       <workItem from="1697040178294" duration="1861000" />
+      <workItem from="1697211252639" duration="59000" />
+      <workItem from="1697211612747" duration="1183000" />
+      <workItem from="1697215039215" duration="364000" />
     </task>
     <servers />
   </component>
