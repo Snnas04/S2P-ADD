@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<films>
+    <films titol="U2: Experience + Innocente, Live in Berlin" duracio="75" generes="Music" valoracio="7.1" argument="U2 live in Berlin. A must for all U2 fans" directors="Matt Askem" repartiment="Bono,Adam Clayton, The Edge, Larry MullerJr."/>
+    <films titol="Harry Potter i la cambra secreta" duracio="130" generes="Fantasia" valoracio="8.2" argument="argumant" directors="director" repartiment="repartiment"/>
+    <films titol="Star Wars Capitulo IV" duracio="140" generes="Fantasia" valoracio="9.1" argument="argumant" directors="director" repartiment="repartiment"/>
+    <films titol="Spiderman" duracio="120" generes="Fantasia" valoracio="8.2" argument="argumant" directors="director" repartiment="repartiment"/>
+</films>

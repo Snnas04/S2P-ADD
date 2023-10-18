@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<films>
+    <films>
+        <titol>U2: Experience + Innocente, Live in Berlin</titol>
+        <duracio>75</duracio>
+        <generes>Music</generes>
+        <valoracio>7.1</valoracio>
+        <argument>U2 live in Berlin. A must for all U2 fans</argument>
+        <directors>Matt Askem</directors>
+        <repartiment>Bono,Adam Clayton, The Edge, Larry MullerJr.</repartiment>
+    </films>
+    <films>
+        <titol>Harry Potter i la cambra secreta</titol>
+        <duracio>130</duracio>
+        <generes>Fantasia</generes>
+        <valoracio>8.2</valoracio>
+        <argument>argumant</argument>
+        <directors>director</directors>
+        <repartiment>repartiment</repartiment>
+    </films>
+    <films>
+        <titol>Star Wars Capitulo IV</titol>
+        <duracio>140</duracio>
+        <generes>Fantasia</generes>
+        <valoracio>9.1</valoracio>
+        <argument>argumant</argument>
+        <directors>director</directors>
+        <repartiment>repartiment</repartiment>
+    </films>
+    <films>
+        <titol>Spiderman</titol>
+        <duracio>120</duracio>
+        <generes>Fantasia</generes>
+        <valoracio>8.2</valoracio>
+        <argument>argumant</argument>
+        <directors>director</directors>
+        <repartiment>repartiment</repartiment>
+    </films>
+</films>
