@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/Activitat2-OPCIONAL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/estructuraXML.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/FastInfoset-1.2.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/stax-ex-1.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/txw2-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/lib/txw2-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/socis.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/src/LlistaSocis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/src/Soci.java" afterDir="false" />
-    </list>
+    <list default="true" id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +83,7 @@
       <workItem from="1697211612747" duration="1183000" />
       <workItem from="1697215039215" duration="364000" />
       <workItem from="1697549579979" duration="36000" />
+      <workItem from="1697561693668" duration="8000" />
     </task>
     <servers />
   </component>
