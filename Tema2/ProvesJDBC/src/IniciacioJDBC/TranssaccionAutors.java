@@ -12,51 +12,34 @@ public class TranssaccionAutors {
 
     public static void main(String[] args) {
         try(Connection conn = DriverManager.getConnection(url, usuari, password)) {
-            // a
             conn.setAutoCommit(false);
             var statement = conn.createStatement();
 
-            // b
-            var sql = "UPDATE AUTORS SET NOM_AUT = ? WHERE ID_AUT = ?";
-            var preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(1, "Arnau Codina");
-            preparedStatement.setString(1, "Olívia Riutort");
-            preparedStatement.setInt(2, 1139);
-            var result = preparedStatement.executeUpdate();
+            var sql = "DELETE FROM AUTORS WHERE ID_AUT = 9283";
+            var resultDELETE = statement.executeUpdate(sql);
 
-            // c
             sql = "SELECT COUNT(*) FROM AUTORS";
-            var resultC = statement.executeQuery(sql);
+            var resultCOUNT1 = statement.executeQuery(sql);
 
-            System.out.println("Hi ha " + resultC + " autors");
+            System.out.println("Hi ha " + resultCOUNT1 + " autors");
 
-            // d
+
             sql = "INSERT INTO AUTORS VALUES (9283, 'Andreu Garcia', '2004-04-04', 'Espanyol', NULL)";
-            var resultD = statement.executeUpdate(sql);
+            var resultINSERT = statement.executeUpdate(sql);
 
-            System.out.println("S'ha afegit " + resultD + " als autors");
+            System.out.println("S'ha afegit " + resultINSERT + " als autors");
+            sql = "SELECT COUNT(*) FROM AUTORS";
+            var resultCOUNT2 = statement.executeQuery(sql);
 
-            // e
+            System.out.println("Hi ha " + resultCOUNT2 + " autors");
+            
             conn.rollback();
 
-            // f
-            sql = "SELECT COUNT(*) FROM AUTORS";
-            var resultF = statement.executeQuery(sql);
-
-            System.out.println("Hi ha " + resultF + " autors");
-
-            // g
-            sql = "INSERT INTO AUTORS VALUES (9283, 'Andreu Garcia', '2004-04-04', 'Espanyol', NULL)";
-            var resultG = statement.executeUpdate(sql);
-
-            System.out.println("S'ha afegit " + resultG + " als autors");
-
-            conn.commit();
 
             sql = "SELECT COUNT(*) FROM AUTORS";
-            var resultGCount = statement.executeQuery(sql);
+            var resultCOUNT3 = statement.executeQuery(sql);
 
-            System.out.println("Hi ha " + resultGCount + " autors");
+            System.out.println("Hi ha " + resultCOUNT3 + " autors");
 
             statement.close();
         } catch (SQLException e) {
