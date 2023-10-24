@@ -1,21 +1,27 @@
 package IniciacioJDBC;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SentenciesPreparadesAutors {
-    private static final String url = "jdbc:mysql://localhost:3306/BIBLIOTECA";
-    private static final String usuari = "root";
-    private static final String password = "1234";
+    private final static String URL = "jdbc:mysql://localhost:3306/biblioteca";
+    private final static String user = "root";
+    private final static String password = "Thespai422";
 
     public static void main(String[] args) {
-        try(Connection conn = DriverManager.getConnection(url, usuari, password)) {
-            var sentencia = conn.prepareStatement("INSERT INTO AUTORS VALUES (?, ?, ?)");
-               
+        try (var con = DriverManager.getConnection(URL, user, password)) {
+            var sentencia = con.createStatement();
+
+            var sql = "UPDATE AUTORS SET NOM_AUT = ? WHERE ID_AUT = ?";
+            var preparedStatement = con.prepareStatement(sql);
+            preparedStatement.setString(1, "Arnau Codina");
+            preparedStatement.setString(1, "Olívia Riutort");
+            preparedStatement.setInt(2, 1139);
+            var result = preparedStatement.executeUpdate();
+
+            sentencia.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-
 }
