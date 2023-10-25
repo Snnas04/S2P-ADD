@@ -15,10 +15,7 @@ public class TranssaccionAutors {
             conn.setAutoCommit(false);
             var statement = conn.createStatement();
 
-            var sql = "DELETE FROM AUTORS WHERE ID_AUT = 9283";
-            var resultDELETE = statement.executeUpdate(sql);
-
-            sql = "SELECT COUNT(*) FROM AUTORS";
+            var sql = "SELECT COUNT(*) FROM AUTORS";
             var resultCOUNT1 = statement.executeQuery(sql);
 
             System.out.println("Hi ha " + resultCOUNT1 + " autors");
@@ -32,7 +29,7 @@ public class TranssaccionAutors {
             var resultCOUNT2 = statement.executeQuery(sql);
 
             System.out.println("Hi ha " + resultCOUNT2 + " autors");
-            
+
             conn.rollback();
 
 
