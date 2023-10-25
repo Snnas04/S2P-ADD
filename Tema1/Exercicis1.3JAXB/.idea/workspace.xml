@@ -5,43 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e919e0bb-5feb-4cb2-a570-b84248e1f4a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/Examen-marcsans.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/books_prova.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/films.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/films.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/films.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/films.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/FastInfoset-1.2.16-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/FastInfoset-1.2.16-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/FastInfoset-1.2.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/istack-commons-runtime-3.0.8-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/istack-commons-runtime-3.0.8-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/istack-commons-runtime-3.0.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.activation-api-1.2.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.activation-api-1.2.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.xml.bind-api-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.xml.bind-api-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jaxb-runtime-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jaxb-runtime-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/jaxb-runtime-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/stax-ex-1.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/stax-ex-1.8.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/stax-ex-1.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/txw2-2.3.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/txw2-2.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/lib/txw2-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/src/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/src/Films.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen/Examen-marcsans/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Activitat2-OPCIONAL/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Activitat2-OPCIONAL/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema2/ExerciciImportar/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema2/ExerciciImportar/empleats.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema2/ExerciciImportar/src/Empleat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema2/ExerciciImportar/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +93,7 @@
       <workItem from="1697645761909" duration="40000" />
       <workItem from="1697646142794" duration="11000" />
       <workItem from="1697648473384" duration="18000" />
+      <workItem from="1698251841504" duration="10000" />
     </task>
     <servers />
   </component>
