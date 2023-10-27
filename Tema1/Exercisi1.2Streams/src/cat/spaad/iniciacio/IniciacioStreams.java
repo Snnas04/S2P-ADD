@@ -11,7 +11,7 @@ public class IniciacioStreams {
     public static void main(String[] args) {
         IniciacioStreams iniciacioStreams = new IniciacioStreams();
         try {
-            iniciacioStreams.provesBuffered();
+            iniciacioStreams.provesObjecte();
         } catch (Exception e) {
             e.printStackTrace();
         }
