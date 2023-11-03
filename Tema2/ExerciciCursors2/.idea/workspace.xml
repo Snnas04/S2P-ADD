@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26431b10-17b0-4116-90e2-5a7f9041073f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/negoci.hdl0wQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/negoci.hdl0wQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/493b0d32-a106-42d2-b86f-75a1eac5ec56/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExerciciCursors2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExerciciComandes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExerciciComandes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExerciciExcepcions/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExerciciExcepcions/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExerciciExcepcions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExerciciExcepcions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProvesJDBC/src/IniciacioJDBC/SentenciesPreparadesAutors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProvesJDBC/src/IniciacioJDBC/SentenciesPreparadesAutors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +58,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -85,6 +77,10 @@
       <updated>1698766478023</updated>
       <workItem from="1698766479538" duration="1559000" />
       <workItem from="1698771682426" duration="22000" />
+      <workItem from="1699028744982" duration="596000" />
+      <workItem from="1699031479010" duration="1064000" />
+      <workItem from="1699032680568" duration="222000" />
+      <workItem from="1699032911919" duration="226000" />
     </task>
     <servers />
   </component>

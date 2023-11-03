@@ -30,11 +30,11 @@ public class Main {
                 int choice = scanner.nextInt();
 
                 var statment = connection.createStatement();
-                var result = "0";
+                String result = "";
 
                 switch (choice) {
                     case 1: // primer
-                        var sql =primer();
+                        var sql = primer();
                         var resultPrimer = statment.executeQuery(sql);
                         resultPrimer.next();
                         var CLIENT_COD = resultPrimer.getString("CLIENT_COD");
@@ -51,9 +51,20 @@ public class Main {
                                 "\nTelefon: " + TELEFON +
                                 "\n"
                         );
+
                         break;
                     case 2: // seguent
-                        sql = seguent(result);
+                        result = seguent(result);
+                        statment.executeQuery(result);
+
+                        break;
+                    case 3: // anterior
+                        result = anterior(result);
+                        statment.executeQuery(result);
+
+                        break;
+                    case 4: // darrer
+                        sql = darrer();
                         resultPrimer = statment.executeQuery(sql);
                         resultPrimer.next();
                         CLIENT_COD = resultPrimer.getString("CLIENT_COD");
@@ -65,18 +76,12 @@ public class Main {
 
                         System.out.println(
                                 "\nID: " + CLIENT_COD +
-                                        "\nNom: " + NOM +
-                                        "\nAdreca: " + ADRECA +
-                                        "\nTelefon: " + TELEFON +
-                                        "\n"
+                                "\nNom: " + NOM +
+                                "\nAdreca: " + ADRECA +
+                                "\nTelefon: " + TELEFON +
+                                "\n"
                         );
-                        break;
-                    case 3: // anterior
-                        result = anterior(result);
-                        statment.executeQuery(result);
-                        break;
-                    case 4: // darrer
-                        statment.executeQuery(darrer());
+
                         break;
                     case 5: // sortir
                         exit = true;
