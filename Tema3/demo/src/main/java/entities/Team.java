@@ -67,6 +67,6 @@ public class Team {
                 "idTeam=" + idTeam +
                 ", name='" + name + '\'' +
                 ", director='" + director + '\'' +
-                '}';
+                '}' + "\n";
     }
 }

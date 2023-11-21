@@ -23,8 +23,6 @@ public class Main {
             for (Rider r : query.getResultList()) {
                 System.out.println(r);
             }
-
-
         } finally {
             em.close();
             emf.close();
