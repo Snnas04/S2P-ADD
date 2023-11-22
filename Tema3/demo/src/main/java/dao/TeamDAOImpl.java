@@ -22,25 +22,23 @@ public class TeamDAOImpl implements TeamDAO {
     }
 
     @Override
-    public Team findByID(int idTeam) {
+    public Team findByID(byte idTeam) {
         EntityManager em = JPAUtil.getEntityManagerFactory();
 
-        TypedQuery<Team> query = em.createQuery("select t from Team t where t.idTeam = :idTeam", Team.class);
-        query.setParameter("id_team", idTeam);
+        Team team = em.find(Team.class, idTeam);
 
-        Team team = query.getSingleResult();
-
+        em.close();
         return team;
     }
 
     @Override
     public Team findByName(String name) {
-        return null;
-    }
+        EntityManager em = JPAUtil.getEntityManagerFactory();
 
-    @Override
-    public Team findByDirector(String director) {
-        return null;
+        Team team = em.find(Team.class, name);
+
+        em.close();
+        return team;
     }
 
     @Override

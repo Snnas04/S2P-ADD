@@ -6,9 +6,8 @@ import java.util.List;
 
 public interface TeamDAO {
     List<Team> findAll();
-    Team findByID(int idTeam);
+    Team findByID(byte idTeam);
     Team findByName(String name);
-    Team findByDirector(String director);
     Team create(Team team);
     Team update(Team team);
     boolean deleteByID(String name);

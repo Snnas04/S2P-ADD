@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 public class TeamCRUDTest {
-TeamDAO dao;
+    TeamDAO dao;
 
     @BeforeEach
     void setUp() {
@@ -23,45 +23,15 @@ TeamDAO dao;
 
     @Test
     void findById() {
-        Team team = dao.findByID(25);
+        Team team = dao.findByID((byte) 1);
 
         System.out.println(team);
     }
 
     @Test
-    void findByDirector() {
-        Team team = dao.findByDirector("Eusebio Unzue");
+    void findByName() {
+        Team team = dao.findByName("Carrera");
 
         System.out.println(team);
-    }
-
-    @Test
-    void create() {
-        Team team = new Team();
-
-        team.setName("Movistar");
-        team.setDirector("Eusebio Unzue");
-
-        Team result = dao.create(team);
-
-        System.out.println(result);
-    }
-
-    @Test
-    void update() {
-        Team team = dao.findByName("Movistar");
-        System.out.println(team);
-        team.setDirector("Eusebio Unzue Fernandez");
-
-        Team updated = dao.update(team);
-
-        System.out.println(updated);
-    }
-
-    @Test
-    void deleteByName() {
-        boolean deleted = dao.deleteByID("Movistar");
-
-        System.out.println(deleted);
     }
 }

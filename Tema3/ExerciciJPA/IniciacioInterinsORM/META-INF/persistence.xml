@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="interins-pu">
+<!--        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+ 		<class>cat.paucasesnovescifp.spaad.model.Aspirant</class> 
+        <class>cat.paucasesnovescifp.spaad.model.Centre</class>
+        <class>cat.paucasesnovescifp.spaad.model.Cos</class>
+        <class>cat.paucasesnovescifp.spaad.model.Especialitat</class>
+        <class>cat.paucasesnovescifp.spaad.model.Illa</class>
+        <class>cat.paucasesnovescifp.spaad.model.Localitat</class>
+        <class>cat.paucasesnovescifp.spaad.model.Preferencia</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/interins"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
