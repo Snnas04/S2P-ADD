@@ -52,7 +52,11 @@ public class Aspirant {
     }
 
     public void setAdreca(String adreca) {
-        this.adreca = adreca;
+        if (adreca == null || adreca.isEmpty()) {
+            throw new IllegalArgumentException("L'adreça no pot ser null");
+        } else {
+            this.adreca = adreca;
+        }
     }
 
     @Basic
