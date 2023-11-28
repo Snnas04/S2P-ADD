@@ -16,6 +16,7 @@ import java.util.logging.Level;
 
 public class Main {
     public static void main(String[] args) {
+        Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 //        testProject();
 //        ProvesCentre();
 //        ProvesAdreca();
@@ -25,6 +26,7 @@ public class Main {
     }
 
     private static void ProvesEsborra() {
+
         try {
             ProvesJPA provesJPA = new ProvesJPA("interins-pu");
             Centre centre = provesJPA.tornaCentre("08000022");
@@ -57,7 +59,7 @@ public class Main {
     private static void ProvesAdreca() {
         try {
             ProvesJPA provesJPA = new ProvesJPA("interins-pu");
-            provesJPA.modificaAdrecaAspirant("12007493F", "Carrer de la Pau, 1");
+            provesJPA.modificaAdrecaAspirant("12007493F", "Càrritx 5");
         } catch (JPAException e) {
             System.out.println(e);
         }
@@ -76,7 +78,7 @@ public class Main {
     }
 
     private static void testProject() {
-        Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+        Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("interins-pu");
         EntityManager em = emf.createEntityManager();

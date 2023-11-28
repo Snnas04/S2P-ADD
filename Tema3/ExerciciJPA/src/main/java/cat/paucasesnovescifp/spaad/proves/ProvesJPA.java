@@ -31,8 +31,8 @@ public class ProvesJPA {
 
     public Aspirant modificaAdrecaAspirant(String nif, String adreca) {
         EntityManager em = JPAUtiles.getEntityManagerFactory();
-        Aspirant aspirant = em.find(Aspirant.class, nif);
         em.getTransaction().begin();
+        Aspirant aspirant = em.find(Aspirant.class, nif);
         aspirant.setAdreca(adreca);
         em.getTransaction().commit();
         em.close();
