@@ -1,10 +1,9 @@
 package cat.paucasesnovescifp.spaad;
 
+import cat.paucasesnovescifp.spaad.DAO.GenericDAOImp;
 import cat.paucasesnovescifp.spaad.ajudes.JPAException;
-import cat.paucasesnovescifp.spaad.model.Centre;
-import cat.paucasesnovescifp.spaad.model.Especialitat;
-import cat.paucasesnovescifp.spaad.model.EspecialitatPK;
-import cat.paucasesnovescifp.spaad.model.Illa;
+import cat.paucasesnovescifp.spaad.ajudes.JPAUtiles;
+import cat.paucasesnovescifp.spaad.model.*;
 import cat.paucasesnovescifp.spaad.proves.ProvesJPA;
 
 import javax.persistence.EntityManager;
@@ -22,7 +21,60 @@ public class Main {
 //        ProvesAdreca();
 //        ProvesActualitzaCentre();
 //        ProvesCreaCentre();
-        ProvesEsborra();
+//        ProvesEsborra();
+//        ProvesCreaCos();
+//        ProvesCreaAspirant();
+//        ProvesCreaCentre();
+//        ProvesTornarAspirant();
+//        ProvesModificaAspirant();
+//        ProvesActualitzaAspirant();
+//        ProvesCrearAspirant();
+        ProvesCrearObjecte();
+    }
+
+    private static void ProvesCrearObjecte() {
+        GenericDAOImp genericDAOImp = new GenericDAOImp();
+        EntityManager em = JPAUtiles.getEntityManager();
+        Cos cos = new Cos();
+        cos.setIdCos("0600");
+        cos.setDescripcio("Test");
+        genericDAOImp.createObject(cos);
+    }
+
+    private static void ProvesCrearAspirant() {
+        GenericDAOImp genericDAOImp = new GenericDAOImp();
+        EntityManager em = JPAUtiles.getEntityManager();
+        Aspirant aspirant = new Aspirant();
+        aspirant.setNif("92324324F");
+        aspirant.setNom("Test");
+        aspirant.setLlinatges("Test");
+        aspirant.setAdreca("Test");
+        aspirant.setCodiPostal("Test");
+        aspirant.setLocalitat(em.find(Localitat.class, "070470005"));
+        genericDAOImp.createAspirant(aspirant);
+    }
+
+    private static void ProvesActualitzaAspirant() {
+        GenericDAOImp genericDAOImp = new GenericDAOImp();
+        EntityManager em = JPAUtiles.getEntityManager();
+        Aspirant aspirant = new Aspirant();
+        aspirant.setNif("12007493F");
+        aspirant.setNom("Test");
+        aspirant.setLlinatges("Test");
+        aspirant.setAdreca("Test");
+        aspirant.setCodiPostal("Test");
+        aspirant.setLocalitat(em.find(Localitat.class, "070470005"));
+        genericDAOImp.updateAspirant(aspirant);
+    }
+
+    private static void ProvesModificaAspirant() {
+        GenericDAOImp genericDAOImp = new GenericDAOImp();
+        genericDAOImp.modifyAspirant("12007493F", "Test Modificat");
+    }
+
+    private static void ProvesTornarAspirant() {
+        GenericDAOImp genericDAOImp = new GenericDAOImp();
+        genericDAOImp.getAspirant("12007493F");
     }
 
     private static void ProvesEsborra() {
