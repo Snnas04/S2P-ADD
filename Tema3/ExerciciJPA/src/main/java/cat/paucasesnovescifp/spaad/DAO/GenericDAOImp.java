@@ -3,7 +3,10 @@ package cat.paucasesnovescifp.spaad.DAO;
 import cat.paucasesnovescifp.spaad.model.Aspirant;
 import cat.paucasesnovescifp.spaad.ajudes.JPAUtiles;
 
+import javax.naming.spi.DirStateFactory;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import java.sql.ResultSet;
 
 public class GenericDAOImp implements GenericDAO {
     @Override
@@ -73,6 +76,22 @@ public class GenericDAOImp implements GenericDAO {
 
     @Override
     public void deleteObject(Object object) {
+        EntityManager em = JPAUtiles.getEntityManager();
+        em.getTransaction().begin();
+        em.remove(object);
+        em.getTransaction().commit();
+        em.close();
 
+        System.out.println("S'ha esborrat l'objecte: \n" + object);
+    }
+
+    public void localitatsIlla(String idIlla) {
+        EntityManager em = JPAUtiles.getEntityManager();
+        Query query = em.createNamedQuery("Illa.localitats");
+        query.setParameter("idIlla", idIlla);
+        var result = query.getResultList();
+        em.close();
+
+        result.forEach(System.out::println);
     }
 }
