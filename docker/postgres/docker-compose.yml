@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: CalaClara21.
+      POSTGRES_PASSWORD: Thespai422
     volumes:
       - ./postgresData:/var/lib/postgresql/data
     ports:
