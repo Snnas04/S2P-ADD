@@ -86,7 +86,7 @@ public class BaseDades {
 
             try (var rs = pre.executeQuery()) {
                 if (rs.next()) {
-                    return new Alumne(nif, rs.getString("nom"), rs.getString("cognoms"), (PGobject) rs.getObject("dades_alumne")); // posam null perquè no ens interessa recuperar les dades de contacte
+                    return new Alumne(nif, rs.getString("nom"), rs.getString("cognoms"), (PGobject) rs.getObject("dades_alumne"));
                 } else {
                     return null;
                 }

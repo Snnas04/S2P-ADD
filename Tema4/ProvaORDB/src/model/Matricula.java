@@ -3,7 +3,7 @@ package model;
 import java.math.BigDecimal;
 
 public class Matricula {
-private Alumne alumne;
+    private Alumne alumne;
     private Assignatura assignatura;
     private BigDecimal[] nota; // BigDeciaml perque es un numero decimal a la base de dades
 

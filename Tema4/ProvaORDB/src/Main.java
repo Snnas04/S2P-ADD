@@ -27,7 +27,7 @@ public class Main {
          System.out.println("4.\n" + contactAlumne);
 
          // 5.Recuperar una matrícula a partir de l'identificador (format per dos camps).
-        Matricula matricula = db.findMatriculaByCodi("98765432B", 2);
+        Matricula matricula = db.findMatriculaByCodi("12345678F", 1);
         System.out.println("5.\n" + matricula);
 
         // 6. Recuperar tots els alumnes de la base de dades.
