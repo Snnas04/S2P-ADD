@@ -1,6 +1,8 @@
 package model;
 
 import java.math.BigDecimal;
+import java.sql.Array;
+import java.util.Arrays;
 
 public class Matricula {
     private Alumne alumne;
@@ -42,7 +44,7 @@ public class Matricula {
         return "Matricula {\n" +
                 "alumne = " + alumne + '\n' +
                 "assignatura = " + assignatura + '\n' +
-                "nota = " + nota + '\n' +
+                "nota = " + Arrays.toString(nota) + '\n' +
                 '}';
     }
 }

@@ -2,6 +2,8 @@ package model;
 
 import org.postgresql.util.PGobject;
 
+import static Utile.EinesCadenes.*;
+
 public class Contacte extends PGobject {
     private String telefon;
     private String email;
@@ -11,6 +13,7 @@ public class Contacte extends PGobject {
         this.telefon = telefon;
         this.email = email;
         this.twitter = twitter;
+        setType("dades_contacte");
     }
 
     public String getTelefon() {
@@ -35,6 +38,16 @@ public class Contacte extends PGobject {
 
     public void setTwitter(String twitter) {
         this.twitter = twitter;
+    }
+
+    @Override
+    public String getValue() {
+        String result = "(";
+        result += tanca(telefon) + ",";
+        result += tanca(email) + ",";
+        result += tanca(twitter) + ")";
+
+        return result;
     }
 
     @Override

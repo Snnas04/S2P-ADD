@@ -1,9 +1,6 @@
 package controller;
 
-import model.Alumne;
-import model.Assignatura;
-import model.Cicle;
-import model.Matricula;
+import model.*;
 import org.postgresql.util.PGobject;
 
 import java.math.BigDecimal;
@@ -16,10 +13,7 @@ public class BaseDades {
     private static final String usuari = "examen";
     private static final String contrasenya = "examen";
 
-    public static void main(String[] args) {
-
-    }
-
+    // 1
     public Cicle findCicleByCodi(int codi) {
         try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
             PreparedStatement pre = con.prepareStatement("select nom from cicles where id_cicle = ?");
@@ -39,6 +33,7 @@ public class BaseDades {
         return null;
     }
 
+    // 2
     public Assignatura findAssignaturaByCodi(int codi) {
         try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
             PreparedStatement pre = con.prepareStatement("select nom, cicle from assignatures where cicle = ?");
@@ -59,6 +54,7 @@ public class BaseDades {
         return null;
     }
 
+    // 3
     public Alumne findAlumneByNIF(String nif) {
         try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
            PreparedStatement pre = con.prepareStatement("select nom, cognoms from alumnes where nif = ?");
@@ -78,6 +74,7 @@ public class BaseDades {
         return null;
     }
 
+    // 4
     public Alumne findAlumneByNIFwhitContact(String nif) {
         try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
             PreparedStatement pre = con.prepareStatement("select nom, cognoms, dades_alumne from alumnes where nif = " +
@@ -98,6 +95,7 @@ public class BaseDades {
         return null;
     }
 
+    // 5
     public Matricula findMatriculaByCodi(String nif, int codiAssig) {
         try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
             PreparedStatement pre = con.prepareStatement("select nota from matricula where alumne = ? and assignatura" +
@@ -109,6 +107,7 @@ public class BaseDades {
                 if (rs.next()) {
                     Array ref = rs.getArray("nota");
                     BigDecimal[] notes = (BigDecimal[]) ref.getArray();
+
                     return new Matricula(findAlumneByNIFwhitContact(nif), findAssignaturaByCodi(codiAssig), notes);
                 } else {
                     return null;
@@ -121,6 +120,7 @@ public class BaseDades {
         return null;
     }
 
+    // 6
     public List<Alumne> findAllAlumneByNIFwhitContact() {
         List<Alumne> listAlumnes = new ArrayList<>();
 
@@ -133,11 +133,125 @@ public class BaseDades {
                 Alumne alumne = new Alumne(rs.getString("nif"), rs.getString("nom"), rs.getString("cognoms"), (PGobject) rs.getObject("dades_alumne"));
                 listAlumnes.add(alumne);
             }
-            return listAlumnes;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return null;
+        return listAlumnes;
+    }
+
+    // 7
+    public List<Matricula> findAllMatriculaByNIF(String nif) {
+        List<Matricula> listMatricules = new ArrayList<>();
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("select assignatura, nota from matricula where alumne = ?");
+            pre.setString(1, nif);
+
+            try (ResultSet rs = pre.executeQuery()) {
+                while (rs.next()) {
+                    Array ref = rs.getArray("nota");
+                    BigDecimal[] notes = (BigDecimal[]) ref.getArray();
+
+                    Matricula matricula = new Matricula(findAlumneByNIFwhitContact(nif), findAssignaturaByCodi(rs.getInt("assignatura")), notes);
+
+                    listMatricules.add(matricula);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return listMatricules;
+    }
+
+    // 8
+    public List<Matricula> findAllMatriculaByCodiAssig(int codiAssig) {
+        List<Matricula> listMatricules = new ArrayList<>();
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("select alumne, nota from matricula where assignatura = ?");
+            pre.setInt(1, codiAssig);
+
+            try (ResultSet rs = pre.executeQuery()) {
+                while (rs.next()) {
+                    Array ref = rs.getArray("nota");
+                    BigDecimal[] notes = (BigDecimal[]) ref.getArray();
+
+                    Matricula matricula = new Matricula(findAlumneByNIFwhitContact(rs.getString("alumne")), findAssignaturaByCodi(codiAssig), notes);
+
+                    listMatricules.add(matricula);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return listMatricules;
+    }
+
+    // 9
+    public boolean modificarNota(String nif, int codiAssig, BigDecimal nota, int posicio) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("update matricula set nota[?] = ? where alumne = ? and assignatura = ?");
+
+            pre.setInt(1, posicio);
+            pre.setBigDecimal(2, nota);
+            pre.setString(3, nif);
+            pre.setInt(4, codiAssig);
+
+            nfiles = pre.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1); // si nfiles == 1, retorna true, si no, retorna false
+    }
+
+    // 10
+    // fora Objecte, ancara que passam un objecta si en lloc de passar un objecte passasim els diferents atributs funcionaria igual
+    public boolean crearAlumne(Alumne alumne) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("insert into alumnes values (?, ?, ?, row(?, ?, ?))");
+
+            pre.setString(1, alumne.getNif());
+            pre.setString(2, alumne.getNom());
+            pre.setString(3, alumne.getCognoms());
+
+            Contacte contacte = (Contacte) alumne.getContacte();
+            pre.setString(4, contacte.getTelefon());
+            pre.setString(5, contacte.getEmail());
+            pre.setString(6, contacte.getTwitter());
+
+            nfiles =pre.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
+    }
+
+    // passant un Objecte
+    public boolean createAlumneObject(Alumne alumne) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("insert into alumnes values (?, ?, ?, ?)");
+
+            pre.setString(1, alumne.getNif());
+            pre.setString(2, alumne.getNom());
+            pre.setString(3, alumne.getCognoms());
+            pre.setObject(4, alumne.getContacte());
+
+            pre.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
     }
 }

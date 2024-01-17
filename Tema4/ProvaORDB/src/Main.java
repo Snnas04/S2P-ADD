@@ -1,9 +1,7 @@
 import controller.BaseDades;
-import model.Alumne;
-import model.Assignatura;
-import model.Cicle;
-import model.Matricula;
+import model.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Main {
@@ -34,5 +32,33 @@ public class Main {
         List<Alumne> allAlumnes = db.findAllAlumneByNIFwhitContact();
         System.out.println("6.");
         allAlumnes.forEach(System.out::println);
+
+        // 7. Recuperar totes les matrícules d'un alumne.
+        List<Matricula> matricules = db.findAllMatriculaByNIF("12345678F");
+        System.out.println("7.");
+        matricules.forEach(System.out::println);
+
+        // 8. Recuperar totes les matrícules d'una assignatura.
+        List<Matricula> matriculesAssig = db.findAllMatriculaByCodiAssig(1);
+        System.out.println("8.");
+        matriculesAssig.forEach(System.out::println);
+
+        // 9. Modificar una de les notes d'una assignatura d'un alumne.
+        boolean resultModificarNotes = db.modificarNota("98765432B", 2, BigDecimal.valueOf(4.0), 2);
+        System.out.println("9.\n" + resultModificarNotes);
+
+        // 10. Afegir un alumne nou a la base de dades.
+        // vercio 1
+//        Alumne newAlumne = new Alumne("12345678Z", "Marc", "Sans", new Contacte("888555222", "marcsans@cpnoves", "@marc"));
+//        boolean resultNouAlumne = db.crearAlumne(newAlumne);
+//        System.out.println("10.\n" + resultNouAlumne);
+
+        // vercio 2
+//        Alumne newAlumneObject = new Alumne("84395683F", "Adrian", "Aguilo", new Contacte("649372057", "adrianaguilo" +
+//                "@cpnoves", "@adri"));
+//        boolean resultNouAlumneObject = db.createAlumneObject(newAlumneObject);
+//        System.out.println("10.\n" + resultNouAlumneObject);
+
+        // 11. Matricular un alumne a una assignatura.
     }
 }
