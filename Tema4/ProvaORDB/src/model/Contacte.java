@@ -2,6 +2,8 @@ package model;
 
 import org.postgresql.util.PGobject;
 
+import java.sql.SQLException;
+
 import static Utile.EinesCadenes.*;
 
 public class Contacte extends PGobject {
@@ -48,6 +50,17 @@ public class Contacte extends PGobject {
         result += tanca(twitter) + ")";
 
         return result;
+    }
+
+    @Override
+    public void setValue(String value) throws SQLException {
+        super.setValue(value);
+
+        String[] atrubuts = parseValue(value);
+
+        telefon = atrubuts[0];
+        email = atrubuts[1];
+        twitter = atrubuts[2];
     }
 
     @Override

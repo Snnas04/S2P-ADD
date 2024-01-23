@@ -254,4 +254,42 @@ public class BaseDades {
 
         return (nfiles == 1);
     }
+
+    // 11
+    public boolean matricularNouAlumne(String nif, int codiAssig) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("insert into matricula values (?, ?, null)");
+            pre.setString(1, nif);
+            pre.setInt(2, codiAssig);
+
+            nfiles = pre.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
+    }
+
+    // 12
+    public boolean afegirNotes(String nif, int codiAsssig, BigDecimal[] notes) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("update matricula set nota = ? where alumne = ? and assignatura = ?");
+
+            Array notesArray = con.createArrayOf("DECIMAL", notes);
+            pre.setArray(1, notesArray);
+            pre.setString(2, nif);
+            pre.setInt(3, codiAsssig);
+
+            nfiles = pre.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
+    }
 }

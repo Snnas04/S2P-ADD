@@ -60,5 +60,12 @@ public class Main {
 //        System.out.println("10.\n" + resultNouAlumneObject);
 
         // 11. Matricular un alumne a una assignatura.
+//        boolean resultatNovaMatricula = db.matricularNouAlumne("12345678F", 2);
+//        System.out.println("11.\n" + resultatNovaMatricula);
+
+        // 12. Afegir les notes d'una matrícula.
+        BigDecimal[] notes = new BigDecimal[]{BigDecimal.valueOf(5.7), BigDecimal.valueOf(6.1), BigDecimal.valueOf(4.3)};
+        boolean resultatAfegirNotes = db.afegirNotes("12345678F", 2, notes);
+        System.out.println("12.\n" + resultatAfegirNotes);
     }
 }
