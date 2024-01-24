@@ -4,7 +4,7 @@
 drop database if exists Institut;
 CREATE DATABASE Institut;
 
-\c cient;
+\c institut;
 
 create type dades_contacte as (
     telefon varchar(9),

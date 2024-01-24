@@ -8,16 +8,19 @@ create type activitats as (
 );
 
 -- modificar taula assignatures --
-alter table assignatures add column activitat activitats[];
+alter table assignatures add column activitat activitats;
+-- alter table assignatures alter column activitat type activitats;
 
 -- crear una nova activitat --
-update assignatures set activitat = array_append(activitat, ('Activitat ORDB', 'Activitat per practicar', null)::activitats)
+update assignatures set activitat = ('Activitat ORDB', 'Activitat per practicar', 'http://www.google.com')
                     where id_assignatura = 2 and cicle = 1;
 
+
 -- modificar una activitat --
-update assignatures set activitat[1].titol = activitat[1].titol || ' BORRADOR'
+-- add "BORRADOR" to the title --
+update assignatures set activitat.titol = (activitat).titol || 'BORRADOR'
                     where id_assignatura = 2 and cicle = 1;
 
 -- afegir una url --
-update assignatures set activitat[1].url = 'https://aulavirtual.paucasesnovescifp.cat/mod/assign/view.php?id=6028'
+update assignatures set activitat.url = 'https://aulavirtual.paucasesnovescifp.cat/mod/assign/view.php?id=6028'
                     where id_assignatura = 2 and cicle = 1;

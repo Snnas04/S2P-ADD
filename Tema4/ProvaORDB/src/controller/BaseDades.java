@@ -1,6 +1,7 @@
 package controller;
 
 import model.*;
+import org.postgresql.PGConnection;
 import org.postgresql.util.PGobject;
 
 import java.math.BigDecimal;
@@ -283,6 +284,49 @@ public class BaseDades {
             pre.setArray(1, notesArray);
             pre.setString(2, nif);
             pre.setInt(3, codiAsssig);
+
+            nfiles = pre.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
+    }
+
+    /* ****************************
+    *   ACTIVITAT PER PRACTICAR   *
+    * ************************** */
+    public boolean addActivitySubject(Activitat activitat, int codiAssig) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("update assignatures set activitat = ? where id_assignatura = ?");
+
+            PGConnection pgConn = (PGConnection) con;
+            pgConn.addDataType("activitats", Activitat.class);
+
+            pre.setObject(1, activitat);
+            pre.setInt(2, codiAssig);
+
+            nfiles = pre.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (nfiles == 1);
+    }
+
+    public boolean deleteActivity(int codiAssig) {
+        int nfiles = 0;
+
+        try (Connection con = DriverManager.getConnection(URL, usuari, contrasenya)) {
+            PreparedStatement pre = con.prepareStatement("update assignatures set activitat = null where " +
+                    "id_assignatura = ?");
+
+
+            pre.setInt(1, codiAssig);
 
             nfiles = pre.executeUpdate();
 

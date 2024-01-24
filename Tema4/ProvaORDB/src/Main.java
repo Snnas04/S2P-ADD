@@ -1,51 +1,53 @@
 import controller.BaseDades;
-import model.*;
+import model.Activitat;
+import model.Assignatura;
 
-import java.math.BigDecimal;
-import java.util.List;
+import java.sql.Array;
 
 public class Main {
     public static void main(String[] args) {
         BaseDades db = new BaseDades();
 
+        ActivitatPracticar(db);
+
         // 1. Recuperar un cicle a partir de l'identificador.
-        Cicle cicle = db.findCicleByCodi(1);
-        System.out.println("1.\n" + cicle);
+//        Cicle cicle = db.findCicleByCodi(1);
+//        System.out.println("1.\n" + cicle);
 
         // 2. Recuperar una assignatura a partir de l'identificador.
-        Assignatura assignatura = db.findAssignaturaByCodi(1);
-        System.out.println("2.\n" + assignatura);
+//        Assignatura assignatura = db.findAssignaturaByCodi(1);
+//        System.out.println("2.\n" + assignatura);
 
         // 3. Recuperar un alumne a partir de l'identificador (tota la informació excepte les dades de contacte).
-        Alumne alumne = db.findAlumneByNIF("98765432B");
-        System.out.println("3.\n" + alumne);
+//        Alumne alumne = db.findAlumneByNIF("98765432B");
+//        System.out.println("3.\n" + alumne);
 
         // 4. Recuperar un alumne a partir de l'identificador (també les dades de contacte).
-         Alumne contactAlumne = db.findAlumneByNIFwhitContact("98765432B");
-         System.out.println("4.\n" + contactAlumne);
+//         Alumne contactAlumne = db.findAlumneByNIFwhitContact("98765432B");
+//         System.out.println("4.\n" + contactAlumne);
 
          // 5.Recuperar una matrícula a partir de l'identificador (format per dos camps).
-        Matricula matricula = db.findMatriculaByCodi("12345678F", 1);
-        System.out.println("5.\n" + matricula);
+//        Matricula matricula = db.findMatriculaByCodi("12345678F", 1);
+//        System.out.println("5.\n" + matricula);
 
         // 6. Recuperar tots els alumnes de la base de dades.
-        List<Alumne> allAlumnes = db.findAllAlumneByNIFwhitContact();
-        System.out.println("6.");
-        allAlumnes.forEach(System.out::println);
+//        List<Alumne> allAlumnes = db.findAllAlumneByNIFwhitContact();
+//        System.out.println("6.");
+//        allAlumnes.forEach(System.out::println);
 
         // 7. Recuperar totes les matrícules d'un alumne.
-        List<Matricula> matricules = db.findAllMatriculaByNIF("12345678F");
-        System.out.println("7.");
-        matricules.forEach(System.out::println);
+//        List<Matricula> matricules = db.findAllMatriculaByNIF("12345678F");
+//        System.out.println("7.");
+//        matricules.forEach(System.out::println);
 
         // 8. Recuperar totes les matrícules d'una assignatura.
-        List<Matricula> matriculesAssig = db.findAllMatriculaByCodiAssig(1);
-        System.out.println("8.");
-        matriculesAssig.forEach(System.out::println);
+//        List<Matricula> matriculesAssig = db.findAllMatriculaByCodiAssig(1);
+//        System.out.println("8.");
+//        matriculesAssig.forEach(System.out::println);
 
         // 9. Modificar una de les notes d'una assignatura d'un alumne.
-        boolean resultModificarNotes = db.modificarNota("98765432B", 2, BigDecimal.valueOf(4.0), 2);
-        System.out.println("9.\n" + resultModificarNotes);
+//        boolean resultModificarNotes = db.modificarNota("98765432B", 2, BigDecimal.valueOf(4.0), 2);
+//        System.out.println("9.\n" + resultModificarNotes);
 
         // 10. Afegir un alumne nou a la base de dades.
         // vercio 1
@@ -67,5 +69,15 @@ public class Main {
 //        BigDecimal[] notes = new BigDecimal[]{BigDecimal.valueOf(5.7), BigDecimal.valueOf(6.1), BigDecimal.valueOf(4.3)};
 //        boolean resultatAfegirNotes = db.afegirNotes("12345678F", 2, notes);
 //        System.out.println("12.\n" + resultatAfegirNotes);
+    }
+
+    private static void ActivitatPracticar(BaseDades db) {
+        Activitat activitat = new Activitat("Activitat 1", "Enunciat de l'activitat 1", "https://www.google.com");
+
+        boolean resultAddActivity = db.addActivitySubject(activitat, 1);
+        System.out.println("Add activity: " + resultAddActivity);
+
+        boolean resultDelteActivity = db.deleteActivity(1);
+        System.out.println("Delete activity: " + resultDelteActivity);
     }
 }
