@@ -17,19 +17,37 @@ public class Delete {
 
         if (!list.isEmpty()) {
             Film film = list.next();
-            film.getActors().removeIf(a -> a.getId() == actorId);
+            film.getActors().removeIf(actor -> actor.getId() == actorId);
 
-            oc.store(film); // This line updates the film in the database
+            oc.store(film);
 
             oc.close();
 
             System.out.println("Actor deleted from film");
-
-            var castByFilmId = selects.selectCastByFilmId(filmId);
-            System.out.println("New film casting:\n" + castByFilmId);
         } else {
             oc.close();
             System.out.println("Film not found");
+        }
+    }
+
+    // 9
+    public void deleteActor(int actorId) {
+        ObjectContainer oc = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), DBNAME);
+        ObjectSet<Film> films = oc.queryByExample(new Film(null, null, null, null, null, null, null, null));
+
+        if (!films.isEmpty()) {
+            while (films.hasNext()) {
+                Film film = films.next();
+                film.getActors().removeIf(actor -> actor.getId() == actorId);
+                oc.store(film);
+            }
+
+            oc.close();
+
+            System.out.println("Actor deleted from all films");
+        } else {
+            oc.close();
+            System.out.println("Actor not found");
         }
     }
 }

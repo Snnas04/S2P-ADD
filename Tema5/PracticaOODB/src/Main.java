@@ -14,10 +14,12 @@ public class Main {
         Delete delete = new Delete();
 
         // 1. Create DB
-//        newDB.CreateDB();
+        System.out.println("1:");
+        newDB.CreateDB();
 
         // 2. Recuperar totes les dades de la base de dades
-//        getDBContent(selects);
+        System.out.println("\n2:");
+        getDBContent(selects);
 
         // 3. Recuperar una pel·lícula per títol
         var filmByTitle = selects.selectFilmByTitle("The Dark Knight");
@@ -41,7 +43,11 @@ public class Main {
 
         // 8. Eliminar un actor d'una pel·lícula
         System.out.println("\n8:");
-        delete.deleteActorFromFilm(1, "1");
+        delete.deleteActorFromFilm(5, "2");
+
+        // 9. Eliminar un actor a partir del seu identificador. Eliminar tambe les seves participacions en pel·lícules
+        System.out.println("\n9:");
+        delete.deleteActor(2);
     }
 
     private static void getDBContent(Selects db) {
