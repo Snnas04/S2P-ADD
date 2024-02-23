@@ -224,3 +224,59 @@ db.aspirants.find({
 
 -- AGGREGATE
 
+-- PRODUCTS
+db.products.find({
+    type: "case",
+    color: "green",
+    price: {
+        $gte: 10,
+        $lte: 15
+    }
+})
+
+db.products.find({
+    price: {
+        $lte: 15
+    }
+})
+
+db.products.find({
+    type: "charger",
+    for: "ac3"
+})
+
+db.products.find({
+    type: "service", "limits.data.n": "unlimited"
+})
+
+db.products.find({
+    type: "phone"
+    },
+    {
+        name: 1,
+        _id: 0
+    }
+).sort({
+    price: -1
+}).limit(2)
+
+db.products.find({
+    for: {
+        $size: 3
+    }
+})
+
+db.products.aggregate([
+    {$match: {for: {$type: "array"}}},
+    {$addFields: {numOfOptions: {$size: "$for"}}},
+    {$project: {name: 1, numProducts: 1}},
+    {$match: {numProducts: {$gte: 3}}}
+])
+
+db.products.find({
+    "for.2": {
+        $ne: null
+    }
+})
+
+-- ZIPS
