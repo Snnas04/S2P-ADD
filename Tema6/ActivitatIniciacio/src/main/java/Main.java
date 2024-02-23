@@ -2,6 +2,8 @@ import Controller.DataBase;
 import Data.Aspirant;
 import org.bson.Document;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         DataBase db = new DataBase("localhost", 27017, "mydb:", "aspirants");
@@ -30,6 +32,30 @@ public class Main {
 //        }
 
         // 7
-        db.getAspirants().forEach(System.out::println);
+//        db.getAspirants().forEach(System.out::println);
+
+        // 11
+//        db.findSkipLimit(10, 5).forEach(System.out::println);
+
+        // 12
+//        db.findByCP("07300").forEach(System.out::println);
+
+        // 13
+//        db.findByCPName("07421", "Margalida").forEach(System.out::println);
+
+        // 14
+//        ArrayList<String> camps = new ArrayList<>();
+//        camps.add("nif");
+//        camps.add("nom");
+//        camps.add("llinatges");
+//        camps.add("codiPostal");
+//
+//        db.findAllProjection(camps).forEach(System.out::println);
+
+        // 15
+//        db.findAllSort("nom", true).forEach(System.out::println);
+
+        // 16
+
     }
 }

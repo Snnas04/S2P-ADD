@@ -7,6 +7,8 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 
+import static com.mongodb.client.model.Projections.include;
+
 public class DataBase {
     private MongoClient client;
     private MongoDatabase db;
@@ -40,4 +42,29 @@ public class DataBase {
 
         return aspirantsList;
     }
+
+    public ArrayList<Document> findSkipLimit(int from, int quantity) {
+        return collection.find().skip(from - 1).limit(quantity).into(new ArrayList<>());
+    }
+
+    public ArrayList<Document> findByCP(String cp) {
+        Document filter = new Document("codiPostal", cp);
+        return collection.find(filter).into(new ArrayList<>());
+    }
+
+    public ArrayList<Document> findByCPName(String cp, String name) {
+        Document filter = new Document("codiPostal", cp).append("nom", name);
+
+        return collection.find(filter).into(new ArrayList<>());
+    }
+
+    public ArrayList<Document> findAllProjection(ArrayList<String> names) {
+        return collection.find().projection(include(names)).into(new ArrayList<>());
+    }
+
+    public ArrayList<Document> findAllSort(String field, boolean asc) {
+        return collection.find().sort(new Document(field, asc ? 1 : -1)).into(new ArrayList<>());
+    }
+
+    
 }
