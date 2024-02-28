@@ -32,7 +32,7 @@ public class Main {
 //        }
 
         // 7
-//        db.getAspirants().forEach(System.out::println);
+        db.getAspirants().forEach(System.out::println);
 
         // 11
 //        db.findSkipLimit(10, 5).forEach(System.out::println);
