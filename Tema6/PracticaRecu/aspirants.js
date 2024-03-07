@@ -1,3 +1,7 @@
+/* **************************************************************************
+*   https://aulavirtual.paucasesnovescifp.cat/mod/assign/view.php?id=6047   *
+************************************************************************** */
+
 /* **********
 *   FIND    *
 ********** */
@@ -211,3 +215,171 @@ db.aspirants.find({
 ************** */
 
 // 25. Utilitza aggregate per filtrar i mostrar els aspirants amb nom Bartomeu
+db.aspirants.aggregate([
+    {
+        $match: {
+            nom: "Bartomeu"
+        }
+    }
+]);
+
+// 26. Modifica la instruccio aterior de manera que mostri els resultats ordenats dalfabeticament perls llinatges
+db.aspirants.aggregate([
+    {
+        $match: {
+            nom: "Bartomeu"
+        }
+    },
+    {
+        $sort: {
+            llinatges: 1
+        }
+    }
+]);
+
+// 27 Modifica la instruccio anteropr de manera que nomes mostri les propietats nif i llinatges
+db.aspirants.aggregate([
+    {
+        $match: {
+            nom: "Bartomeu"
+        }
+    },
+    {
+        $project: {
+            _id: 0,
+            nif: 1,
+            llinatges: 1
+        }
+    },
+    {
+        $sort: {
+            llinatges: 1
+        }
+    }
+])
+
+// 28. Modifica-la de nou per mostrar els llinatges en majuscules.
+db.aspirants.aggregate([
+    {
+        $match: {
+            nom: "Bartomeu"
+        }
+    },
+    {
+        $project: {
+            _id: 0,
+            nif: 1,
+            llinatges: { $toUpper: "$llinatges" }
+        }
+    },
+    {
+        $sort: {
+            llinatges: 1
+        }
+    }
+])
+
+// 29. Mostra els 10 primers aspirants
+db.aspirants.find().limit(10)
+
+// 30. Mostra els aspirants entre els 10 u els 20 primers
+db.aspirants.find().skip(10).limit(10);
+
+db.aspirants.aggregate([
+    { $match: { /* Aquí especifica tus criterios de filtro */ } },
+    { $skip: 10 },  // Omitir los primeros 10 documentos
+    { $limit: 10 }, // Limitar a 10 documentos
+])
+
+
+// 31. Extreu els codis d'illa de la col·leccio, de manera que siguin unics, utilitzat $group i el nom de l'illa
+db.aspirants.aggregate([
+    {$group: {
+        _id: "localitat.illa.nomIlla",
+        codisUnics: { $addToSet: "$localitat.illa.idIlla"}
+    }}
+])
+
+// 32. Crea la col·leccio Codilles amb les dades de l'exercici anteior
+db.aspirants.aggregate([
+    {
+        $group: {
+            _id: "localitat.illa.nomIlla",
+            codisUnics: { $addToSet: "$localitat.illa.idIlla"}
+        }
+    },
+    {
+        $out: "Codiilles"
+    }
+])
+
+db.Codiilles.find()
+
+// 33. Modifica l'aggregate anterior de manera que cada illa incolgui un Array de llinatges dels seus aspirants.
+db.aspirants.aggregate([
+    {
+        $group: {
+            _id: "localitat.illa.nomIlla",
+            codisUnics: { $addToSet: "$localitat.illa.idIlla"},
+            llinatges: { $push: "$llinatges"}
+        }
+    },
+    {
+        $out: "Codiilles"
+    }
+])
+
+// 34. Mostra el nombre de preferencies de cada aspirant (nif, nom, llinatges i el total de preferenceis). Ordena'ls
+// de major a menor nombre de preferencies.
+db.aspirants.aggregate([
+    {
+        $project: {
+            _id: 0,
+            nif: 1,
+            nom: 1,
+            llinatges: 1,
+            totalPreferencies: { $size: "$preferencies" }
+        }
+    },
+    {
+        $sort: {
+            totalPreferencies: -1
+        }
+    }
+])
+
+// 35. Nom i llinatges de l'aspirant amb mes preferencies
+db.aspirants.aggregate([
+    {
+        $project: {
+            _id: 0,
+            nif: 1,
+            nom: 1,
+            llinatges: 1,
+            totalPreferencies: { $size: "$preferencies" }
+        }
+    },
+    {
+        $sort: {
+            totalPreferencies: -1
+        }
+    },
+    {
+        $limit: 1
+    }
+])
+
+// 36. Mostra el nombre d'aspirnats de cada localitata. Ordena'ls de major a menor nombre d'aspirants.
+db.aspirants.aggregate([
+    {
+        $group: {
+            _id: "$localitat.nomLocalitat",
+            totalAspirants: { $sum: 1 }
+        }
+    },
+    {
+        $sort: {
+            totalAspirants: -1
+        }
+    }
+])
