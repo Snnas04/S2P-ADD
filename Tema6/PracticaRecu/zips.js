@@ -48,14 +48,14 @@ db.zips.aggregate([
     {$limit: 1}
 ])
 
-// 7. Mostra el nombre de ciutats de Washington (WA) situades al nord del paralÂ·lel 46.
+// 7. Mostra el nombre de ciutats de Washington (WA) situades al nord del paral·lel 46.
 db.zips.aggregate([
     {$match: {state:"WA","loc.1":{$gt: 46}}},
     {$group: {_id:"$city"}},
     {$count: "numCiutats"}
 ])
 
-// 8. Mostra el nom i la poblaciÃ³ de la ciutat mÃ©s poblada de cada estat.
+// 8. Mostra el nom i la poblacio de la ciutat mÃ©s poblada de cada estat.
 db.zips.aggregate([
     {$group: {_id: {estat: "$state",ciutat: "$city"},poblacio:{$sum: "$pop"}}},
     {$sort: {"_id.estat":1,poblacio:-1}},

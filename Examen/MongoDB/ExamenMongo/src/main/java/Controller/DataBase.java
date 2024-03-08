@@ -1,6 +1,7 @@
 package Controller;
 
 import Data.Llibre;
+import Utils.DBExeptions;
 import com.mongodb.client.*;
 import org.bson.Document;
 
@@ -45,5 +46,11 @@ public class DataBase {
 //        ])
         Document doc = new Document(camp, camp);
         return collection.find().projection(include(camp)).into(new ArrayList<>());
+    }
+
+    public void insert(Document doc) throws DBExeptions {
+        if (doc == null)
+            throw new DBExeptions("Document is null");
+        collection.insertOne(doc);
     }
 }

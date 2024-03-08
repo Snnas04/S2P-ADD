@@ -25,7 +25,6 @@ public class DataBase {
         db = client.getDatabase(dbName);
         collection = db.getCollection(collectionName);
     }
-
     // A la classe BaseDades crea un mètode que rebi un document i l’inserti a la base de dades. Si el document és null, llença una excepció de tipus DBExeptions amb el missatge “Document is null”.
     public void insert(Document doc) throws DBExeptions {
         if (doc == null)

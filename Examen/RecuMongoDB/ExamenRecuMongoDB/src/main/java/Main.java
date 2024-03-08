@@ -74,10 +74,10 @@ public class Main {
 //        db.findByName("Maria", "Joan").forEach(System.out::println);
 
         // 19. Crea un altre mètode que rebi com a paràmetres una llista de noms i torni tots els documents que no contenguin cap dels noms de la llista.
-        ArrayList<String> names = new ArrayList<>();
-        names.add("Maria");
-        names.add("Joan");
-        names.add("Bartomeu");
+//        ArrayList<String> names = new ArrayList<>();
+//        names.add("Maria");
+//        names.add("Joan");
+//        names.add("Bartomeu");
 //        db.findNotInListNames(names).forEach(System.out::println);
 
 /* **********

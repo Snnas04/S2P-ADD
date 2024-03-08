@@ -1,18 +1,20 @@
 import Controller.DataBase;
+import Data.Llibre;
+import org.bson.Document;
 
 public class Main {
     public static void main(String[] args) {
         DataBase db = new DataBase("localhost", 27017, "AAD", "llibres");
 
         // 1
-//        Llibre llibre = new Llibre("00000000", "ExamenJava", "Primera Pregunta", "Marc");
-//        Document doc = new Document(llibre.toMap());
-//
-//        try {
-//            db.insert(doc);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        Llibre llibre = new Llibre("00000000", "ExamenJava", "Primera Pregunta", "Marc");
+        Document doc = new Document(llibre.toMap());
+
+        try {
+            db.insert(doc);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // 2
 //        db.activitat2().forEach(System.out::println);
